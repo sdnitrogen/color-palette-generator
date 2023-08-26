@@ -16,11 +16,11 @@ const PaletteItem = ({ rgb, hex }: PaletteItemProps) => {
 
     return (
         <li
-            className="relative list-none w-40 h-40 rounded-lg shadow-lg shadow-slate-400 dark:shadow-cyan-700/40 transition-all duration-300 ease-in-out hover:-translate-y-2"
+            className="relative list-none w-32 h-32 rounded-lg shadow-lg shadow-slate-400 dark:shadow-cyan-700/40 transition-all duration-300 ease-in-out hover:-translate-y-2"
             style={{ background: rgb }}
         >
             <span
-                className="flex items-center font-semibold bg-[rgba(255,255,255,0.14)] justify-between w-full cursor-pointer px-4 py-2 absolute bottom-0 border-t-2 border-t-border rounded-b-lg"
+                className="flex items-center font-semibold text-sm bg-[rgba(255,255,255,0.14)] justify-between w-full cursor-pointer px-2 py-2 absolute bottom-0 border-t-2 border-t-border rounded-b-lg"
                 onClick={(e) => {
                     copyToClipboard(e);
                     setCopied(true);

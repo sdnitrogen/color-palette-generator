@@ -18,7 +18,7 @@ const ColorPalette = () => {
     };
 
     return (
-        <div className="flex items-center justify-center w-11/12">
+        <div className="flex flex-auto items-center justify-center w-11/12">
             {colorPalette && (
                 <ul className="flex flex-1 flex-wrap items-center justify-center gap-4">
                     {colorPalette.map((color, index) => {

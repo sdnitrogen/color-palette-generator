@@ -9,12 +9,12 @@ const ImageHolder = () => {
         useRecoilState(uploadedImageState);
 
     return (
-        <div className="flex items-center justify-center w-11/12 min-h-[40vh] max-h-[60vh] border-solid border-border border-2">
+        <div className="flex flex-auto items-center justify-center w-11/12 h-[40vh] border-solid border-border border-2">
             {uploadedImage ? (
                 <img
                     src={uploadedImage}
                     alt="uploaded image"
-                    className="max-h-[60vh] object-contain"
+                    className="max-h-full object-contain"
                 />
             ) : (
                 <h2>Upload an Image here...</h2>
