@@ -57,8 +57,8 @@ const ImageHolder = () => {
                             <SheetDescription>
                                 Make changes to your palette here. You can
                                 refresh a new palette from the same image or
-                                generate a random palette of colors if you're
-                                feelin' lucky!
+                                generate a random palette of colors if
+                                you&apos;re feelin&apos; lucky!
                             </SheetDescription>
                         </SheetHeader>
                         <div className="grid gap-4 py-4">
@@ -77,7 +77,7 @@ const ImageHolder = () => {
                                     onClick={generateRandomPalette}
                                 >
                                     <Dices className="mr-2 h-4 w-4" />
-                                    I'm feelin' lucky!
+                                    I&apos;m feelin&apos; lucky!
                                 </Button>
                             </SheetClose>
                         </div>
@@ -89,7 +89,7 @@ const ImageHolder = () => {
                     <span>or</span>
                     <Button className="w-56" onClick={generateRandomPalette}>
                         <Dices className="mr-2 h-4 w-4" />
-                        I'm feelin' lucky!
+                        I&apos;m feelin&apos; lucky!
                     </Button>
                 </div>
             )}
