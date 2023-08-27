@@ -16,6 +16,7 @@ import {
 import { Dices, RotateCw } from "lucide-react";
 import UploadImage from "./UploadImage";
 import { giveRandomColors } from "@/lib/utils";
+import ColorThief from "colorthief";
 
 const ImageHolder = () => {
     const [uploadedImage, setUploadedImage] =
@@ -23,9 +24,20 @@ const ImageHolder = () => {
     const [colorPalette, setColorPalette] = useRecoilState(colorPaletteState);
 
     const generateRandomPalette = () => {
-        const palette = giveRandomColors(6);
-        setColorPalette(palette);
+        const rdmPalette = giveRandomColors(6);
+        setColorPalette(rdmPalette);
         setUploadedImage(null);
+    };
+
+    const refreshPalette = () => {
+        let img = new Image();
+        img.src = uploadedImage!;
+        const colorThief = new ColorThief();
+        const paletteLen = Math.floor(Math.random() * 14 + 7);
+        const rfsPalette = colorThief.getPalette(img, paletteLen);
+        const shuffledPalette = rfsPalette.sort(() => 0.5 - Math.random());
+        let selectedPalette = shuffledPalette.slice(0, 6);
+        setColorPalette(selectedPalette);
     };
 
     return (
@@ -51,7 +63,10 @@ const ImageHolder = () => {
                         </SheetHeader>
                         <div className="grid gap-4 py-4">
                             <SheetClose asChild>
-                                <Button className="w-56">
+                                <Button
+                                    className="w-56"
+                                    onClick={refreshPalette}
+                                >
                                     <RotateCw className="mr-2 h-4 w-4" />
                                     Refresh Palette!
                                 </Button>
