@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Color Palette Generator
 
-## Getting Started
+A Color Palette Generator (randomized / from an image) built with Next.js, TypeScript and Tailwind CSS (shadcn-ui).
 
-First, run the development server:
+Check it out here: [https://color-palette-gen.vercel.app/](https://color-palette-gen.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   Dark mode and Light mode
+-   Copy the generated palette colors (toggle between hex and rgb value)
+-   Upload an image to generate a palette, refresh the palette to get more options
+-   Generate completely randomized colors in a palette and you might be lucky with some nice colors :D
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Technologies
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/-NextJS-FFFFFF?style=for-the-badge&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Shadcn-ui](https://img.shields.io/badge/-ShadcnUI-000000?style=for-the-badge&logoColor=white)
+![Recoil.js](https://img.shields.io/badge/-RecoilJS-007ACC?style=for-the-badge&logoColor=white)
 
-## Learn More
+### How to run
 
-To learn more about Next.js, take a look at the following resources:
+-   Clone this repository to your local system.
+-   cd to the project directory on terminal and type `npm install` followed by `npm run dev`
+-   Go to url: http://localhost:3000 in your browser to check out the app.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Preview
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<img src="Screenshot.png" align="center"><br><br>
 
-## Deploy on Vercel
+### Support Development
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/sdnitrogen) <br>
+[![Donate](https://img.shields.io/badge/Donate-Paypal-blue?style=for-the-badge)](https://www.paypal.me/sdnitrogen)
