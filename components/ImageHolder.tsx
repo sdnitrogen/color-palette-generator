@@ -1,6 +1,6 @@
 "use client";
 
-import { uploadedImageState } from "@/states";
+import { colorPaletteState, uploadedImageState } from "@/states";
 import React from "react";
 import { useRecoilState } from "recoil";
 import { Button } from "./ui/button";
@@ -15,10 +15,18 @@ import {
 } from "./ui/sheet";
 import { Dices, RotateCw } from "lucide-react";
 import UploadImage from "./UploadImage";
+import { giveRandomColors } from "@/lib/utils";
 
 const ImageHolder = () => {
     const [uploadedImage, setUploadedImage] =
         useRecoilState(uploadedImageState);
+    const [colorPalette, setColorPalette] = useRecoilState(colorPaletteState);
+
+    const generateRandomPalette = () => {
+        const palette = giveRandomColors(6);
+        setColorPalette(palette);
+        setUploadedImage(null);
+    };
 
     return (
         <div className="flex flex-col flex-auto items-center justify-center w-11/12 h-[38vh] border-solid border-border border-2">
@@ -49,7 +57,10 @@ const ImageHolder = () => {
                                 </Button>
                             </SheetClose>
                             <SheetClose asChild>
-                                <Button className="w-56">
+                                <Button
+                                    className="w-56"
+                                    onClick={generateRandomPalette}
+                                >
                                     <Dices className="mr-2 h-4 w-4" />
                                     I'm feelin' lucky!
                                 </Button>
@@ -61,7 +72,7 @@ const ImageHolder = () => {
                 <div className="flex flex-col items-center justify-center gap-4">
                     <UploadImage />
                     <span>or</span>
-                    <Button className="w-56">
+                    <Button className="w-56" onClick={generateRandomPalette}>
                         <Dices className="mr-2 h-4 w-4" />
                         I'm feelin' lucky!
                     </Button>
