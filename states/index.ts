@@ -10,3 +10,8 @@ export const colorPaletteState = atom<RGBColor[] | null>({
     key: "colorPaletteState",
     default: null,
 });
+
+export const colorFormatState = atom<boolean>({
+    key: "colorFormatState",
+    default: false,
+});
